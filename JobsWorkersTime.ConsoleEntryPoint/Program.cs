@@ -24,9 +24,9 @@ public class Program
 
         workers = new List<GraphicDesigner>
         {
-            new("Влад", TimeSpan.FromMinutes(2), ConsoleColor.Gray),
-            new("Ілля", TimeSpan.FromMinutes(3), ConsoleColor.White),
-            new("Катя", TimeSpan.FromMinutes(4), ConsoleColor.DarkGray),
+            new("Влад", TimeSpan.FromMinutes(2), ConsoleColor.DarkGreen),
+            new("Ілля", TimeSpan.FromMinutes(3), ConsoleColor.DarkBlue),
+            new("Катя", TimeSpan.FromMinutes(4), ConsoleColor.DarkRed),
         };
     }
 
@@ -67,9 +67,9 @@ public class Program
         IEnumerable<Job> jobs;
         IEnumerable<Worker> workers;
 
-        //ExampleImage(out jobs, out workers);
+        ExampleImage(out jobs, out workers);
         //ExampleDelivery(out jobs, out workers);
-        ExampleFarm(out jobs, out workers);
+        //ExampleFarm(out jobs, out workers);
 
         var stopwatch = Stopwatch.StartNew();
 
@@ -88,14 +88,14 @@ public class Program
     {
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("-----------------------------------------------");
-        Console.WriteLine($"Швидкість симуляції: x{Config.SimulationSpeed}");
+        Console.WriteLine($"Швидкість симуляції: x{Config.SimulationSpeed}\n");
         Console.WriteLine($"Реальний час виконання: {stopwatch.Elapsed.TotalSeconds:N2} секунд\n");
         foreach (var worker in workers)
         {
             double simulatedMinutes = worker.TimePerJob.TotalMinutes * worker.CompletedJobs.Count;
             Console.ForegroundColor = worker.Color;
-            Console.WriteLine($"{worker.Name} завершив {worker.CompletedJobs.Count} завдань");
-            Console.WriteLine($"- Симульований час: {worker.TimePerJob.TotalMinutes} x {worker.CompletedJobs.Count} = {simulatedMinutes:N2} хвилин");
+            Console.WriteLine($"{worker.Name} -> {worker.CompletedJobs.Count} завдань");
+            Console.WriteLine($"- Симульований час: {worker.TimePerJob.TotalMinutes} x {worker.CompletedJobs.Count} = {simulatedMinutes:N2} хвилин\n");
         }
         Console.WriteLine("-----------------------------------------------");
     }
