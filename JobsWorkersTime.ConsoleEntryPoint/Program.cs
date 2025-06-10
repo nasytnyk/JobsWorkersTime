@@ -1,20 +1,10 @@
-﻿using JobsWorkersTime.ModelImplementations.ExampleImage;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-
+﻿using JobsWorkersTime.LogicAbstract;
 using JobsWorkersTime.ModelAbstract;
 using JobsWorkersTime.ModelAbstract.Entities;
 using JobsWorkersTime.ModelImplementations.ExampleDelivery;
 using JobsWorkersTime.ModelImplementations.ExampleFarm;
-
-
-using JobsWorkersTime.LogicAbstract;
+using JobsWorkersTime.ModelImplementations.ExampleImage;
+using System.Diagnostics;
 
 public class Program
 {
