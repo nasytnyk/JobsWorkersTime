@@ -1,7 +1,6 @@
 > Результат
 
-![image](https://github.com/user-attachments/assets/4c05ff6e-c561-4bb6-8d6b-54ee5e54b0de)
-
+![image](https://github.com/user-attachments/assets/2bb26486-d5c2-40c5-a944-ed8eaf93cbe5)
 
 # Постановка завдання
 
