@@ -8,6 +8,7 @@ using System.Diagnostics;
 
 public class Program
 {
+    // Зразок з графічними дизайнерами (основний)
     private static void ExampleImage(out IEnumerable<Job> jobs, out IEnumerable<Worker> workers)
     {
         jobs = Enumerable.Range(1, 1000).Select(i => new AdvertisingImage($"image{i}.jpg")).ToList();
@@ -20,6 +21,7 @@ public class Program
         };
     }
 
+    // Зразок з кур'єрами (більше робіт, велика різниця у часі)
     private static void ExampleDelivery(out IEnumerable<Job> jobs, out IEnumerable<Worker> workers)
     {
         jobs = Enumerable.Range(1, 1234).Select(i => new Parsel($"посилка #{i}")).ToList();
@@ -35,6 +37,7 @@ public class Program
         };
     }
 
+    // Зразок з комбайнами (менше робіт, мала різниця у часі)
     private static void ExampleFarm(out IEnumerable<Job> jobs, out IEnumerable<Worker> workers)
     {
         jobs = Enumerable.Range(1, 567).Select(i => new Potato($"картоплина #{i}")).ToList();
