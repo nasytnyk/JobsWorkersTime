@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JobsWorkersTime.LogicAbstract\JobsWorkersTime.LogicAbstract.csproj" />
+    <ProjectReference Include="..\JobsWorkersTime.ModelAbstract\JobsWorkersTime.ModelAbstract.csproj" />
+    <ProjectReference Include="..\JobsWorkersTime.ModelImplementations\JobsWorkersTime.ModelImplementations.csproj" />
+  </ItemGroup>
+
+</Project>
