@@ -94,7 +94,7 @@ public class Program
         {
             double simulatedMinutes = worker.TimePerJob.TotalMinutes * worker.CompletedJobs.Count;
             Console.ForegroundColor = worker.Color;
-            Console.WriteLine($"{worker.Name} -> {worker.CompletedJobs.Count} завдань");
+            Console.WriteLine($"{worker.Name} --> {worker.CompletedJobs.Count} завдань");
             Console.WriteLine($"- Симульований час: {worker.TimePerJob.TotalMinutes} x {worker.CompletedJobs.Count} = {simulatedMinutes:N2} хвилин\n");
         }
         Console.WriteLine("-----------------------------------------------");
